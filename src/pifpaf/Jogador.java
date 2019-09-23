@@ -96,7 +96,7 @@ public class Jogador {
     }
     
     public void mostrarVencedor(){
-        if(vencer.size() == 8){
+        if(vencer.size() == 9){
             System.out.println(nome+" Venceu com: ");
             for (Carta v : vencer) {
             System.out.println(v.toString());

@@ -97,6 +97,12 @@ public class Baralho {
         ArrayList<Carta> carta = new ArrayList<>(lixo);
         if(!lixeira.isEmpty())
             carta.add(lixeira.get(lixeira.size()-1));
+
+        if (lixeira.size() == 0 || lixeira == null){
+            System.out.println("A lixerira está vazia");
+            return carta;
+        }
+        
         lixeira.remove(0);
         return carta;
     }

@@ -29,9 +29,7 @@ public class Jogo {
     }
     
     public void mostrarCartas(){
-        jogadores.forEach((j) -> {
-            j.mostrarCartas();
-        });
+        jogadores.forEach(Jogador::mostrarCartas);
         baralho.iniciarBolo();
     }
     
@@ -61,7 +59,13 @@ public class Jogo {
                     break;
                 
                 case 2:
+
                     j.setMao(baralho.puxarDaLixeira(j.getMao()));
+
+                    //se o lixo for vazio ele tem que parar
+                    if(j.getMao().size() <= 9)
+                        break;
+
                     j.verificaJogos(j.getMao());
                     j.mostrarCartas();
                     System.out.println("jogador "+j.getNome()+", escolha uma carta para descartar: ");

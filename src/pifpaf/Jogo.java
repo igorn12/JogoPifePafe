@@ -51,22 +51,24 @@ public class Jogo {
                 switch(opcao){
                 case 1:
                     j.setMao(baralho.puxarDoBolo(j.getMao()));
-                    j.verificaJogos();
+                    j.verificaJogos(j.getMao());
                     j.mostrarCartas();
                     System.out.println("jogador "+j.getNome()+", escolha uma carta para descartar: ");
                     indice = input.nextInt();
                     baralho.lixeira(j.getMao().get(indice));
                     j.remover(j.getMao().get(indice));
+                    j.mostrarVencedor();
                     break;
                 
                 case 2:
                     j.setMao(baralho.puxarDaLixeira(j.getMao()));
-                    j.verificaJogos();
+                    j.verificaJogos(j.getMao());
                     j.mostrarCartas();
                     System.out.println("jogador "+j.getNome()+", escolha uma carta para descartar: ");
                     indice = input.nextInt();
                     baralho.lixeira(j.getMao().get(indice));
                     j.remover(j.getMao().get(indice));
+                    j.mostrarVencedor();
                     break;
                 
                 default:

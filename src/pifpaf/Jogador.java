@@ -54,7 +54,6 @@ public class Jogador {
                                     vencer.add(mao.get(c));
                                     removeCartas();
                                     System.out.println("Fez uma trinca !");
-                                    break;
                                 }
                             }
                         }
@@ -79,7 +78,6 @@ public class Jogador {
                                     vencer.add(mao.get(c));
                                     removeCartas();
                                     System.out.println("Fez uma sequencia !");
-                                    break;
                                 }
                             }
                         }
